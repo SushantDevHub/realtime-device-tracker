@@ -22,7 +22,6 @@ Check out the live project: [Realtime Device Tracker](https://realtime-device-tr
 3. **Disconnecting Users**:  
    - When a user closes the app, their marker is automatically removed from the map.
 
----
 
 ## **Tech Stack**
 
@@ -38,7 +37,7 @@ Check out the live project: [Realtime Device Tracker](https://realtime-device-tr
   - **EJS** for server-side rendering.
   - **Render** for deployment.
 
----
+
 
 ## **Features**
 
