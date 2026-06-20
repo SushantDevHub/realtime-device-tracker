@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Realtime Device Tracker</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <!-- Permission / onboarding screen -->
+  <div id="permission-screen" class="overlay">
+    <div class="permission-card">
+      <div class="permission-icon">📍</div>
+      <h1>Find My Location</h1>
+      <p>To show you on the live map and display the temperature where you are,
+         we need access to your device's location.</p>
+
+      <button id="enable-location-btn" class="primary-btn">
+        Choose My Location
+      </button>
+
+      <p id="permission-status" class="status-text"></p>
+    </div>
+  </div>
+
+  <!-- Error / unsupported screen -->
+  <div id="error-screen" class="overlay hidden">
+    <div class="permission-card">
+      <div class="permission-icon">⚠️</div>
+      <h1>Location Unavailable</h1>
+      <p id="error-message">We couldn't access your location.</p>
+      <button id="retry-btn" class="primary-btn">Try Again</button>
+    </div>
+  </div>
+
+  <!-- Top info bar (shown once tracking starts) -->
+  <div id="info-bar" class="info-bar hidden">
+    <div class="info-bar-left">
+      <span class="dot"></span>
+      <span>Live Tracking</span>
+    </div>
+    <div id="accuracy-pill" class="accuracy-pill hidden" title="GPS accuracy radius">
+      <span id="accuracy-text">±-- m</span>
+    </div>
+    <div id="weather-pill" class="weather-pill hidden">
+      <span id="weather-icon">🌡️</span>
+      <span id="weather-temp">--°</span>
+    </div>
+    <button id="recenter-btn" class="icon-btn" title="Recenter on me">🎯</button>
+  </div>
+
+  <!-- Nearby places category bar -->
+  <div id="nearby-bar" class="nearby-bar hidden">
+    <button class="nearby-btn" data-category="fuel">⛽ Fuel</button>
+    <button class="nearby-btn" data-category="hospital">🏥 Hospital</button>
+    <button class="nearby-btn" data-category="food">🍔 Food</button>
+  </div>
+
+  <!-- Nearby results bottom sheet -->
+  <div id="nearby-sheet" class="nearby-sheet hidden">
+    <div class="nearby-sheet-header">
+      <span id="nearby-sheet-title">Nearby</span>
+      <button id="nearby-sheet-close" class="icon-btn small">✕</button>
+    </div>
+    <div id="nearby-sheet-body" class="nearby-sheet-body">
+      <p class="nearby-loading">Searching nearby…</p>
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/script.js"></script>
+</body>
+</html>
