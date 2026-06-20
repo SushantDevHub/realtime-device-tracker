@@ -25,7 +25,7 @@ io.on("connection",function(socket){
     })
 })
 
-
+// Serve the main application page when users access the root URL
 app.get("/", (req, res)=>
 {
     res.render("index");   
