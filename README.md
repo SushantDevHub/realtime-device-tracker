@@ -1,3 +1,7 @@
+## 🌐 Live Demo
+https://realtime-device-tracker-etz1.onrender.com
+
+_Add your deployed link here once available._
 # 📍 Realtime Device Tracker
 
 A **realtime location-sharing web app** where a group of people can open a shared link and see each other's live position on a map — along with the current temperature, and the nearest fuel stations, hospitals, and food spots. No account, no app install, just a link.
@@ -93,13 +97,6 @@ realtime-device-tracker/
 
 > ⚠️ **Note:** Browsers only allow geolocation access over HTTPS or on `localhost`. If you deploy this, make sure it's served over HTTPS (most hosts like Render do this automatically) — otherwise location requests will be blocked.
 
----
-
-## 🌐 Live Demo
-
-_Add your deployed link here once available._
-
----
 
 ## 🔮 Possible Future Improvements
 
