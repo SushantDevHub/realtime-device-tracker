@@ -67,17 +67,13 @@ realtime-device-tracker/
     │   └── style.css        # All styling
     └── js/
         └── script.js         # Geolocation, map rendering, weather & nearby-places logic
-```
-
----
 
 ## 🚀 Running Locally
 
 1. **Clone the repository**
    ```bash
    git clone https://github.com/sumitprajapati1/Realtime-Device-Tracker.git
-   cd Realtime-Device-Tracker
-   ```
+   
 
 2. **Install dependencies**
    ```bash
@@ -102,4 +98,3 @@ realtime-device-tracker/
 - Movement trails (fading line behind each moving pin)
 - Persistent room history / chat alongside the map
 - More nearby-place categories (ATMs, pharmacies, EV chargers)
-- Dark mode
